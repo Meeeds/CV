@@ -12,15 +12,15 @@
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
-\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+\usepackage[scale=0.81]{geometry}
+%\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -56,7 +56,7 @@
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
 %\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
-\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 %   to redefine the bibliography heading string ("Publications")
 %\renewcommand{\refname}{Articles}
 
@@ -72,45 +72,92 @@
 \makecvtitle
 %\renewcommand{\listitemsymbol}{$\circ$ }
 \section{Expérience professionnelle}
-%\subsection{Amadeus}
-\cventry{2010 - 2022}{Amadeus}{Ingénieur développement}{}{}
+\subsection{\textbf{Amadeus}}
+\cventry{2020 - }{développeur cloud}{}{}{}
 {
-test
+Migration du produit paiement au private cloud et Microsoft Azure
 }
-\cvlistitem{migration}
-\cvlistitem{second}
+\cventry{2016 - 2020}{développeur cloud}{}{}{}
+{
+Migration du produit flight search a google cloud engine à l'aide d'OpenShift / Kubernetes / docker
+}
+\cventry{2013 - 2016}{développeur C++}{}{}{}
+{
+Développement d'un algorithme de recherche de vols avec de fortes contraintes de performances (Plus de 10k tps, réponse ~100ms)
+}
+%\cvlistitem{migration}
+%\cvlistitem{second}
+\cventry{2010 - 2013}{développeur C++}{}{}{}
+{
+Migration technique des données vols depuis le système TPF (IBM) vers une architecture micro service développé en interne
+}
+\subsection{\textbf{Ubisoft}}
 \cventry{2010}{Ubisoft}{}{}{Développeur middleware}{Développement d'un moteur physique en C++}
 
 \section{Formation}
 \cventry{2010}{Ingénieur informatique}{Ensimag}{}{}{Spécialité imagerie et réalité virtuelle}
 
-\section{Activité d'enseignement}
-\cvitem{2014}{Résistance des matériaux : Travaux pratiques et travaux dirigés à l'IUT de Lyon (\textasciitilde70h)}
-\cvitem{2015 - 2017}{Informatique : Travaux pratiques sur les réseaux UNIX (niveau M2) et travaux dirigés de programmation en C (niveau L2 et L3) à l'Université de Lyon (\textasciitilde120h)}
+\section{Compétences}
+%% \cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
+%% Skill matrix as an alternative to rate one's skills, computer or other. 
 
-% \section{"Awards"}
-% \cvitem{}{Concours ENS}
-% \cvitem{}{Bourse Normalien}
+%% Adjusts width of skill matrix columns. 
+%% Usage \setcvskillcolumns[<width>][<factor>][<exp_width>]
+%% <width>, <exp_width> should be lengths smaller than \textwidth, <factor> needs to be between 0 and 1.
+%% Examples:
+% \setcvskillcolumns[5em][][]%    adjust first column. Same as \setcvskillcolumns[5em]
+% \setcvskillcolumns[][0.45][]%   adjust third (skill) column. Same as \setcvskillcolumns[][0.45]
+%\setcvskillcolumns[][0.1][\widthof{``Year''}]%     adjust fourth (years) column.
+% \setcvskillcolumns[][0.45][\widthof{``Year''}]%
+% \setcvskillcolumns[\widthof{``Languag''}][0.48][]
+% \setcvskillcolumns[\widthof{``Languag''}]%
 
-\section{Événements suivis}
-\cvitem{Sep. 2014}{École d'été intitulé "Sub-Riemannian manifolds: from geodesics to hypoelliptic diffusion", CIRM, Marseille (\href{http://www.cmap.polytechnique.fr/subriemannian/cirm/}{lien}).}
-\cvitem{Sep–Déc 2014}{Trimestre intitulé "Geometry, Analysis and Dynamics on sub-Riemannian Manifolds", Institut Henri Poincaré, Paris (\href{http://www.cmap.polytechnique.fr/subriemannian/index.html}{lien}).}
+\setcvskillcolumns[][][1pt]%     adjust fourth (years) column.
 
+%% Adjusts width of legend columns. Usage \setcvskilllegendcolumns[<width>][<factor>]
+%% <factor> needs to be between 0 and 1. <width> should be a length smaller than \textwidth
+%% Examples:
+% \setcvskilllegendcolumns[][0.45]
+% \setcvskilllegendcolumns[\widthof{``Legend''}][0.45]
+% \setcvskilllegendcolumns[0ex][0.46]% this is usefull for the banking style
 
-\section{Langues}
-\cvitem{Français}{Langue maternelle}
-\cvitem{Anglais}{Bonne expression orale et écrite (TOEIC niveau 920 sur 990)}
+%% Add a legend if you are using \cvskill{<1-5>} command or \cvskillentry
+%% Usage \cvskilllegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \cvskilllegend % insert default legend without lines
+%% \cvskilllegend*[1em]{}% adjust post spacing
+% \cvskilllegend*{Legend}%  Alternatively add a description string
+%% adjust the legend entries for other languages, here German
+% \cvskilllegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte\,/\,Spezialist]{Legende}
 
-\section{Compétences informatiques}
-% \cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvitem{Programmation}{C, C++ et Latex}
-\cvitem{Scientifique}{Matlab et Mathematica}
-\cvitem{Autre}{Maîtrise de l'environnement UNIX}
+%% Alternative legend style with the first three skill levels in one column
+%% Usage \cvskillplainlegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \setcvskilllegendcolumns[][0.6]%  works for classic, casual, banking
+% \setcvskilllegendcolumns[][0.55]%  works better for oldstyle and fancy
+% \cvskillplainlegend{}
+% \cvskillplainlegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte/Guru]{Legende}
+
+%% Add a head of the skill matrix table with descriptions.
+%% Usage \cvskillhead[<post_padding>][<Level>][<Skill>][<Years>][<Comment>]%
+\cvskillhead[-0.1em][Niveau][][][Commentaire]%   this inserts the standard legend in english and adjust padding
+%% Adjust head of the skill matrix for other languages
+% \cvskillhead[0.25em][Level][F\"ahigkeit][Jahre][Bemerkung]
+
+%% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}% 
+%% Example usages:
+\cvskillentry*{Language:}{4}{C++}{}{Dev backend, optim. de performances}
+\cvskillentry{}{2}{python, go, bash}{}{Développement d'outils}
+\cvskillentry{}{1}{sql, couchbase}{}{Gestion et transfert des données }
+\cvskillentry*{Cloud:}{3}{openshift, helm, kube, docker}{}{Déploiement de soft sur gce/azure}
+\cvskillentry*{OS:}{4}{Linux, Windows}{}{Dev sur server linux et sur VScode}
+\cvskillentry*{Méthodes:}{3}{Scrum, Kanban, Safe, Jira}{}{Travail en agile depuis 2015}
+% \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
+\vspace{15pt}
+\cvitem{Autres:}{mongo, kafka, perl, java, javascript, git, \LaTeX}
+
 
 \section{Centres d’intérêts}
 \cvitem{Jeux}{Jeux de plateau, jeu de go, échecs}
 \cvitem{Sciences}{Physique, mathématiques }
-
 \cvitem{Autres}{Randonnées, énigmes }
 
 \end{document}
