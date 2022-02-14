@@ -1,7 +1,7 @@
-CV.log
-CV.aux
-CV.fls
-CV.fdb_latexmk
-CV.out
-CV.pdf
-CV.synctex.gz
+*.log
+*.aux
+*.fls
+*.fdb_latexmk
+*.out
+*.pdf
+*.synctex.gz

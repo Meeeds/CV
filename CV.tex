@@ -19,10 +19,11 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.81]{geometry}
-%\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+\usepackage[top=1cm,bottom=1cm,left=2cm,right=2cm]{geometry}
+\recomputelengths
+%\setlength{\footskip}{12.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%\setlength{\makecvheadnamewidth}{15cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % font loading
 % for luatex and xetex, do not use inputenc and fontenc
@@ -44,15 +45,16 @@
 % personal data
 \firstname{Louis}
 \familyname{Barjon}
-% \title{ResumÃ© title}                          % optional, remove / comment the line if not wanted
+%\title{Resu title}                          % optional, remove / comment the line if not wanted
 \title{\small 13 octobre 1987}
-\address{965 chemin du puy}{06600 Antibes}    % optional, remove / comment the line if not wanted
+% \address{965 chemin du puy}{06600 Antibes}    % optional, remove / comment the line if not wanted
+\social[linkedin]{louis-barjon}
 \mobile{06~86~67~89~06}                     % optional, remove / comment the line if not wanted
 % \phone{+2~(345)~678~901}                     % optional, remove / comment the line if not wanted
 % \fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
 \email{louis.barjon@gmail.com}                  % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-
+\quote{Senior développeur cloud \& C\texttt{++}}
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
 %\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
@@ -63,6 +65,18 @@
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
+\usepackage{graphicx,calc}
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+\newcommand*\inlinegraphics[1]{%
+  \settototalheight\myheight{Xygp}%
+  \settodepth\mydepth{Xygp}%
+  \raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
+}
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -72,30 +86,33 @@
 \makecvtitle
 %\renewcommand{\listitemsymbol}{$\circ$ }
 \section{Expérience professionnelle}
-\subsection{\textbf{Amadeus}}
-\cventry{2020 - }{développeur cloud}{}{}{}
-{
-Migration du produit paiement au private cloud et Microsoft Azure
+\subsection{\textbf{Amadeus}, Antibes}
+\cventry{2020 - }{Sénior développeur cloud}{}{}{}
+{}
+\cvlistitem{Migration du produit paiement au private cloud et Microsoft Azure}
+\cvlistitem{Mise en place de code quality avec SonarQube 
+%\inlinegraphics{sonar}
 }
-\cventry{2016 - 2020}{développeur cloud}{}{}{}
-{
-Migration du produit flight search a google cloud engine à l'aide d'OpenShift / Kubernetes / docker
-}
-\cventry{2013 - 2016}{développeur C++}{}{}{}
-{
-Développement d'un algorithme de recherche de vols avec de fortes contraintes de performances (Plus de 100k tps, réponse ~100ms)
-}
+\cventry{2016 - 2020}{Développeur cloud}{}{}{}
+{}
+\cvlistitem{Migration du produit Flight Search à Google Cloud Engine à l'aide d'OpenShift / Kubernetes / Docker. Migration des données sur couchbase avec le client C\texttt{++}}
+\cvlistitem{Unit test avec 	Gmok/Gtest}
+\cventry{2013 - 2016}{Développeur C\texttt{++}}{}{}{}
+{}
+\cvlistitem{Développement C\texttt{++} du produit Flight Search avec de fortes contraintes de performances (Plus de 100k tps, réponse $\sim$100ms)}
+\cvlistitem{Optimisation de l'algo MCT (Minimum Connecting Time) et division par 5 du CPU}
+
 %\cvlistitem{migration}
 %\cvlistitem{second}
-\cventry{2010 - 2013}{développeur C++}{}{}{}
+\cventry{2010 - 2013}{Développeur C\texttt{++}}{débutant}{}{}
 {
-Migration technique des données vols depuis le système TPF (IBM) vers une architecture micro service développé en interne
+Migration technique des données vols depuis le système TPF (IBM) vers une architecture micro service développée en interne.
 }
-\subsection{\textbf{Ubisoft}}
-\cventry{2010}{Ubisoft}{}{}{Développeur middleware}{Développement d'un moteur physique en C++}
+\subsection{\textbf{Ubisoft}, Montpellier}
+\cventry{2010}{Développeur middleware}{}{}{}{Développement d'un moteur physique en C\texttt{++}}
 
 \section{Formation}
-\cventry{2010}{Ingénieur informatique}{Ensimag}{}{}{Spécialité imagerie et réalité virtuelle}
+\cventry{2010}{Ingénieur informatique}{Ensimag}{}{}{Spécialité: imagerie et réalité virtuelle}
 
 \section{Compétences}
 %% \cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
@@ -144,15 +161,16 @@ Migration technique des données vols depuis le système TPF (IBM) vers une arch
 
 %% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}% 
 %% Example usages:
-\cvskillentry*{Languages:}{4}{C++}{}{Dev backend, optim. de performances}
+\cvskillentry*{Langues:}{3}{Anglais}{}{Used every day for work, social, and science}
+\cvskillentry*{Languages:}{4}{C\texttt{++}}{}{Dev backend, optim. de performances}
 \cvskillentry{}{2}{python, go, bash}{}{Développement d'outils}
 \cvskillentry{}{1}{sql, couchbase}{}{Gestion et transfert des données}
-\cvskillentry*{Cloud:}{3}{openshift, helm, kube, docker}{}{Déploiement de soft sur gce/azure}
-\cvskillentry*{OS:}{4}{Linux, Windows}{}{Dev sur server linux et sur VScode}
+\cvskillentry*{Cloud:}{3}{openshift, helm, kube, docker}{}{Déploiement de soft sur gce/Azure}
+%\cvskillentry*{OS:}{4}{Linux, Windows}{}{Dev sur server linux et sur VScode}
 \cvskillentry*{Méthodes:}{3}{Scrum, Kanban, Safe, Jira}{}{Travail en agile depuis 2015}
 % \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
 \vspace{15pt}
-\cvitem{Autres:}{mongo, kafka, perl, java, javascript, git, \LaTeX}
+\cvitem{Autres:}{mongo, kafka, perl, java, javascript, git, VScode, Eclipse, \LaTeX}
 
 
 \section{Centres d’intérêts}
