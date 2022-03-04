@@ -49,12 +49,12 @@
 \title{\small 13 octobre 1987}
 % \address{965 chemin du puy}{06600 Antibes}    % optional, remove / comment the line if not wanted
 \social[linkedin]{louis-barjon}
-\mobile{06~86~67~89~06}                     % optional, remove / comment the line if not wanted
+% \mobile{06~86~67~89~06}                     % optional, remove / comment the line if not wanted
 % \phone{+2~(345)~678~901}                     % optional, remove / comment the line if not wanted
 % \fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
-\email{louis.barjon@gmail.com}                  % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Senior développeur cloud \& C\texttt{++}}
+\email{louis.barjon@amadeus.com}                  % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture_amadeus2}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\quote{Developer cloud \& C\texttt{++}}
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
 %\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
@@ -85,24 +85,24 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 %\renewcommand{\listitemsymbol}{$\circ$ }
-\section{Expérience professionnelle}
+\section{Work Experience}
 \subsection{\textbf{Amadeus}, Sophia Antipolis}
-\cventry{2020 - }{Sénior développeur cloud/C\texttt{++}}{}{}{}
+\cventry{2020 - }{Developer cloud/C\texttt{++} in Payment}{}{}{}
 {}
-\cvlistitem{Migration du produit paiement au private cloud et Microsoft Azure}
-\cvlistitem{Mise en place de code quality avec SonarQube 
+\cvlistitem{Migrate the payment product to Ironman and Microsoft Azure}
+\cvlistitem{Code quality enforcement with SonarQube 
 %\inlinegraphics{sonar}
 }
-\cventry{2016 - 2020}{Développeur cloud}{}{}{}{}
-\cvlistitem{Migration du produit Flight Search à Google Cloud Engine à l'aide d'OpenShift / Kubernetes / Docker. Migration des données sur couchbase avec le client C\texttt{++}}
-\cvlistitem{Unit test avec 	Gmok/Gtest}
-\cventry{2010 - 2016}{Développeur C\texttt{++}}{}{}{}{}
-\cvlistitem{Développement du produit Flight Search avec de fortes contraintes de performances (plus de 100k tps, réponse $\sim$100ms)}
-\cvlistitem{Optimisation de l'algo MCT (Minimum Connecting Time) et division par 5 du CPU}
+\cventry{2016 - 2020}{Developer cloud in the Shopping Tribe}{}{}{}{}
+\cvlistitem{Migrate Travel Solution Builder product to the cloud using OpenShift / Kubernetes / Docker. Data migration from Oracle to Couchbase C\texttt{++}}
+\cvlistitem{Unit test with Gmok/Gtest}
+\cventry{2013 - 2016}{Developer C\texttt{++} in Journey Server}{}{}{}{}
+\cvlistitem{Development of the Travel Solution Builder product with high performance constraints  (more than 100k tps, reply $\sim$100ms)}
+\cvlistitem{Oscar Project: MCT algorithm optimization: number of instructions divided by 5 and a 20\% decrease of the global Master Pricer CPU }
 
-%\cventry{2010 - 2016}{Développeur C\texttt{++}}{}{}{}{}
-\cvlistitem{Migration technique des données vols depuis le système TPF (IBM) vers une architecture micro service développée en interne}
-\cvlistitem{UI développé en Java}
+\cventry{2010 - 2013}{Developer C\texttt{++} in Flight Data}{}{}{}{}
+\cvlistitem{Flight Data migration from TPF to OBE}
+
 
 
 
@@ -110,13 +110,13 @@
 %\renewcommand*{\listitemsymbol}{\labelitemi~}
 
 \subsection{\textbf{Ubisoft}, Montpellier}
-\cventry{2010}{Développeur middleware C\texttt{++}}{}{}{}{}
-\cvlistitem{Développement d'un moteur physique fournis comme API pour les jeux vidéo. Qualité de code exigeante: 99\% code coverage, performances test, etc }
+\cventry{2010}{Developer middleware C\texttt{++}}{}{}{}{}
+\cvlistitem{Strong code quality: 100\% code coverage, performances test, etc }
 
-\section{Formation}
-\cventry{2010}{Ingénieur informatique}{Ensimag}{}{}{Spécialité: imagerie et réalité virtuelle}
+\section{Education}
+\cventry{2010}{Software Engineer}{Ensimag}{}{}{Speciality: imaging and virtual reality}
 
-\section{Compétences}
+\section{Skills}
 %% \cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
 %% Skill matrix as an alternative to rate one's skills, computer or other. 
 
@@ -157,28 +157,28 @@
 
 %% Add a head of the skill matrix table with descriptions.
 %% Usage \cvskillhead[<post_padding>][<Level>][<Skill>][<Years>][<Comment>]%
-\cvskillhead[-0.1em][Niveau][][][Commentaire]%   this inserts the standard legend in english and adjust padding
+\cvskillhead[-0.1em][Level][][][Comment]%   this inserts the standard legend in english and adjust padding
 %% Adjust head of the skill matrix for other languages
 % \cvskillhead[0.25em][Level][F\"ahigkeit][Jahre][Bemerkung]
 
 %% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}% 
 %% Example usages:
-\cvskillentry*{}{3}{Anglais}{}{Used every day for work, social, and hobbies}
-\cvskillentry*{Languages:}{4}{C\texttt{++}}{}{Dev backend, optim. de performances}
-\cvskillentry{}{3}{Python, GoLang, Bash}{}{Outils, dispatching framework avec gRPC-go}
-\cvskillentry{}{2}{Sql, Couchbase, MongoDB}{}{Gestion et transfert des données}
-\cvskillentry*{Cloud:}{3}{Openshift, Helm, Kube, Docker}{}{Déploiement et migration de soft sur gce/Azure}
+\cvskillentry*{}{3}{English}{}{Used every day for work, social, and hobbies}
+\cvskillentry*{Languages:}{4}{C\texttt{++}}{}{Dev backend, performances optim. }
+\cvskillentry{}{3}{Python, GoLang, Bash}{}{Tools, dispatching framework with gRPC-go}
+\cvskillentry{}{2}{Sql, Couchbase, MongoDB}{}{Data management and migration}
+\cvskillentry*{Cloud:}{3}{Openshift, Helm, Kube, Docker}{}{Software migration to gce/Azure}
 %\cvskillentry*{OS:}{4}{Linux, Windows}{}{Dev sur server linux et sur VScode}
-\cvskillentry*{Méthodes:}{4}{Scrum, Kanban, Safe, Jira}{}{Travail en agile depuis 2015}
+\cvskillentry*{Méthodes:}{4}{Scrum, Kanban, Safe, Jira}{}{Work with agile since 2015}
 % \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
 \vspace{15pt}
 \cvitem{Autres:}{Kafka, Java, Javascript, Git, VScode, Eclipse, \LaTeX}
 
 
-\section{Centres d’intérêts}
-\cvitem{Jeux}{Jeux de plateau, jeu de go, échecs}
-\cvitem{Sciences}{Physique, mathématiques }
-\cvitem{Autres}{Randonnées, énigmes }
+\section{Hobbies}
+\cvitem{Games}{Board games, game of go, chess}
+\cvitem{Science}{Physics, mathematics }
+\cvitem{Others}{Hiking, riddles }
 
 \end{document}
 
