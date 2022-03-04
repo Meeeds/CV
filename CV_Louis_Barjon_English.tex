@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[top=1cm,bottom=1cm,left=2cm,right=2cm]{geometry}
+\usepackage[top=0.5cm,bottom=0.5cm,left=1cm,right=1cm]{geometry}
 \recomputelengths
 %\setlength{\footskip}{12.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
@@ -87,18 +87,33 @@
 %\renewcommand{\listitemsymbol}{$\circ$ }
 \section{Work Experience}
 \subsection{\textbf{Amadeus}, Sophia Antipolis}
-\cventry{2020 - }{Developer cloud/C\texttt{++} in Payment}{}{}{}
+
+
+\renewcommand{\listitemsymbol}{}
+
+
+\cventry{2021 - }{Developer MDW cloud for TPE}{}{}{}{}
+\cvlistitem{Design of the job migration to ACS inside the batches SCRUM team}
+
+\renewcommand*{\listitemsymbol}{\labelitemi~}
+
+\cventry{2020 - 2021}{Developer cloud/C\texttt{++} in Payment}{}{}{}
 {}
 \cvlistitem{Migrate the payment product to Ironman and Microsoft Azure}
 \cvlistitem{Code quality enforcement with SonarQube 
 %\inlinegraphics{sonar}
 }
 \cventry{2016 - 2020}{Developer cloud in the Shopping Tribe}{}{}{}{}
-\cvlistitem{Migrate Travel Solution Builder product to the cloud using OpenShift / Kubernetes / Docker. Data migration from Oracle to Couchbase C\texttt{++}}
-\cvlistitem{Unit test with Gmok/Gtest}
+\cvlistitem{Migrate Travel Solution Builder product to the cloud using OpenShift / Kubernetes / Docker}
+\cvlistitem{Data migration from Oracle to Couchbase C\texttt{++}}
 \cventry{2013 - 2016}{Developer C\texttt{++} in Journey Server}{}{}{}{}
 \cvlistitem{Development of the Travel Solution Builder product with high performance constraints  (more than 100k tps, reply $\sim$100ms)}
 \cvlistitem{Oscar Project: MCT algorithm optimization: number of instructions divided by 5 and a 20\% decrease of the global Master Pricer CPU }
+\cvlistitem{Unit test with Gmok/Gtest}
+
+
+\renewcommand{\listitemsymbol}{}
+%\renewcommand*{\listitemsymbol}{\labelitemi~}
 
 \cventry{2010 - 2013}{Developer C\texttt{++} in Flight Data}{}{}{}{}
 \cvlistitem{Flight Data migration from TPF to OBE}
@@ -106,8 +121,6 @@
 
 
 
-\renewcommand{\listitemsymbol}{}
-%\renewcommand*{\listitemsymbol}{\labelitemi~}
 
 \subsection{\textbf{Ubisoft}, Montpellier}
 \cventry{2010}{Developer middleware C\texttt{++}}{}{}{}{}
