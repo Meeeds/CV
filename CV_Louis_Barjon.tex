@@ -72,9 +72,19 @@
 \settodepth\mydepth{Xygp}
 \setlength\fboxsep{0pt}
 \newcommand*\inlinegraphics[1]{%
-  \settototalheight\myheight{Xygp}%
-  \settodepth\mydepth{Xygp}%
-  \raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
+  \settototalheight\myheight{X}%
+  \settodepth\mydepth{X}%
+  \raisebox{-\mydepth}{\includegraphics[height=1.2\myheight]{#1}}%
+}
+
+\newcommand*{\outlinegraphics}[1]{%
+    \raisebox{-.2\baselineskip}{%
+        \includegraphics[
+        height=\baselineskip,
+        width=\baselineskip,
+        keepaspectratio,
+        ]{#1}%
+    }%
 }
 
 %----------------------------------------------------------------------------------
@@ -90,9 +100,10 @@
 \cventry{2020 - }{Sénior développeur cloud/C\texttt{++}}{}{}{}
 {}
 \cvlistitem{Migration du produit paiement au private cloud et Microsoft Azure}
-\cvlistitem{Mise en place de code quality avec SonarQube 
-%\inlinegraphics{sonar}
-}
+\cvlistitem{Mise en place de code quality avec SonarQube \inlinegraphics{sonar.png}  }
+
+%\outlinegraphics{sonar.png}
+
 \cventry{2016 - 2020}{Développeur cloud}{}{}{}{}
 \cvlistitem{Migration du produit Flight Search à Google Cloud Engine à l'aide d'OpenShift / Kubernetes / Docker. Migration des données sur couchbase avec le client C\texttt{++}}
 \cvlistitem{Unit test avec 	Gmok/Gtest}
