@@ -1,0 +1,243 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2021 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[top=0.5cm,bottom=0.5cm,left=1cm,right=1cm]{geometry}
+% \usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+% doesnt work https://tex.stackexchange.com/questions/14306/link-formatting-colors-underlines-in-moderncv
+\recomputelengths
+%\setlength{\footskip}{12.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{15cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% personal data
+\firstname{Louis}
+\familyname{BARJON}
+%\title{Resu title}                          % optional, remove / comment the line if not wanted
+%\title{\small 13 octobre 1987}
+\title{\small French}
+% \address{965 chemin du puy}{06600 Antibes}    % optional, remove / comment the line if not wanted
+\social[linkedin]{louis-barjon}
+\social[github]{Meeeds/CV}
+\mobile{(+33)~06~86~67~89~06}                     % optional, remove / comment the line if not wanted
+% \phone{+33(0)~6~86~67~86~86}                     % optional, remove / comment the line if not wanted
+% \fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
+\email{louis.barjon@gmail.com}                  % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture_amadeus2}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\quote{Senior developer cloud \& C\texttt{++}}
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+\usepackage{graphicx,calc}
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+\newcommand*\inlinegraphics[1]{%
+  \settototalheight\myheight{Xygp}%
+  \settodepth\mydepth{Xygp}%
+  \raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
+}
+
+\usepackage[binary-units]{siunitx}
+
+% to debug hbox too wide
+%\showboxdepth=5
+%\showboxbreadth=5
+%\showboxdepth=\maxdimen
+%\showboxbreadth=\maxdimen
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+%\renewcommand{\listitemsymbol}{$\circ$ }
+
+
+%\vspace*{-9mm}
+\section{Work Experience}
+\subsection{\textbf{Amadeus}, Nice, Sophia Antipolis, France}
+
+% disable bullet on cvlistitem
+% \renewcommand{\listitemsymbol}{}
+%\newcommand*{\labelfullbullet}{\strut\textcolor{color1}{\Large\textbullet}}
+\newcommand*{\labelfullbullet}{\strut\textcolor{color1}{\Large\rmfamily\textbullet}}
+
+
+% so listitemsymbol can be defined as labelitemi~ or labelfullbullet~
+\renewcommand*{\listitemsymbol}{\labelfullbullet~}
+
+
+\cventry{2022 -  }{Java \& Cloud developer for Hospitality}{}{}{}{}
+% \cvline{}{description}
+\cvlistitem{Migrate 30 Java Spring BE for hotel distribution in Azure. Architecture: Kafka, Couchbase, Oracle}
+%\cvlistitem{Development in hotel distribution \& Azure migration. Java Spring Boot \& Camel, Kafka, Couchbase}
+\cvlistitem{Develop various python tools to help $\sim$100 Devs migrate their apps to the cloud}
+\cvlistitem{Enforce a Unit test framework in Hotel division. Multiply number of tests by 2 in 6 months}
+
+
+% \renewcommand{\listitemsymbol}{}
+\cventry{2021 - 2022}{Golang middleware developer }{}{}{}{}
+\cvlistitem{Design \& develop a generic tool to ease cloud migration of batches, used by $\sim$thousands Devs}
+\cvlistitem{Create a testing framework in bash in order to validate code changes}
+
+%\renewcommand{\listitemsymbol}{$\circ$ }
+\renewcommand*{\listitemsymbol}{\labelfullbullet~}
+
+\cventry{2020 - 2021}{Cloud \& C\texttt{++} developer for Payment}{}{}{}
+{}
+\cvlistitem{Design Openshift pods split for 20 Payment backends, to migrate on Azure \& private cloud}
+\cvlistitem{Code quality enforcement with SonarQube. PR perf checks \& improvement using callgrind
+%\inlinegraphics{sonar}
+}
+\cventry{2016 - 2020}{C\texttt{++} \& Cloud developer for Shopping}{}{}{}{}
+\cvlistitem{Migrate Travel Solution product to the cloud (gce) using OpenShift \& Docker}
+\cvlistitem{ \SI{100}{\giga\byte} Data model migration from Oracle to Couchbase C\texttt{++} using key/value storage (json)}
+\cvlistitem{Json parsing using rapidjson library, CPU decreased by 50\% }
+\cvlistitem{Develop a python tool in order to tests iso-functional behavior between Cloud \& legacy}
+\cventry{2013 - 2016}{C\texttt{++} developer in Journey Server}{}{}{}{}
+\cvlistitem{Development of the Travel Solution product with high performance constraints  ($\geq$ 150k tps, $\leq$100ms)}
+% symbole environ $\sim$
+% \cvlistitem{Oscar Project: code optimization: number of instructions decreased by 5\% }
+% \cvlistitem{Unit test with Gmok/Gtest}
+\cvlistitem{Algorithmic optimization for MCT (Minimum Connecting Time): CPU decreased by 75\%}
+\cvlistitem{Oracle Migration: smooth migration from Oracle 12 to 18 without outage }
+
+
+% \renewcommand{\listitemsymbol}{}
+%\renewcommand*{\listitemsymbol}{\labelitemi~}
+
+\cventry{2010 - 2013}{C\texttt{++} developer for Flight Data}{}{}{}{}
+\cvlistitem{Product migration from TPF system (IBM) to a micro-service architecture (OBE), using an internal MDW}
+\cvlistitem{Develop a python tool in order to tests iso-functional behavior between TPF \& OBE }
+
+
+
+\subsection{\textbf{Ubisoft}, Montpellier, France}
+\cventry{2010}{C\texttt{++} physics engine developer, middleware}{}{}{}{}
+\cvlistitem{Develop and improve an Algorithm to detect 3D models collisions}
+\cvlistitem{Improve unit tests to Achieve 100\% code coverage}
+\cvlistitem{Run C\texttt{++} profiling using callgrind to decrease CPU by 10\% }
+%\cvlistitem{Algorithm to detect 3D models collisions. Achieve 100\% UT code coverage, CPU decreased by 10\% }
+
+\section{Education}
+\cventry{2010}{Master in Computer Science, Engineer}{}{}{}{}
+\cvlistitem{Ensimag school in Grenoble, Specialty: imaging and virtual reality}
+\cvlistitem{ Develop an \textcolor{cyan}{\href{http://www-evasion.imag.fr/Enseignement/cours/2009/ProjetImage/}{algorithm from a research paper}} to generate textures from a small image sample}
+
+\pagebreak
+\vspace*{10mm}
+
+\section{Skills}
+%% \cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
+%% Skill matrix as an alternative to rate one's skills, computer or other. 
+
+%% Adjusts width of skill matrix columns. 
+%% Usage \setcvskillcolumns[<width>][<factor>][<exp_width>]
+%% <width>, <exp_width> should be lengths smaller than \textwidth, <factor> needs to be between 0 and 1.
+%% Examples:
+% \setcvskillcolumns[5em][][]%    adjust first column. Same as \setcvskillcolumns[5em]
+% \setcvskillcolumns[][0.45][]%   adjust third (skill) column. Same as \setcvskillcolumns[][0.45]
+%\setcvskillcolumns[][0.1][\widthof{``Year''}]%     adjust fourth (years) column.
+% \setcvskillcolumns[][0.45][\widthof{``Year''}]%
+% \setcvskillcolumns[\widthof{``Languag''}][0.48][]
+% \setcvskillcolumns[\widthof{``Languag''}]%
+
+\setcvskillcolumns[][][1pt]%     adjust fourth (years) column.
+
+%% Adjusts width of legend columns. Usage \setcvskilllegendcolumns[<width>][<factor>]
+%% <factor> needs to be between 0 and 1. <width> should be a length smaller than \textwidth
+%% Examples:
+% \setcvskilllegendcolumns[][0.45]
+% \setcvskilllegendcolumns[\widthof{``Legend''}][0.45]
+% \setcvskilllegendcolumns[0ex][0.46]% this is usefull for the banking style
+
+%% Add a legend if you are using \cvskill{<1-5>} command or \cvskillentry
+%% Usage \cvskilllegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \cvskilllegend % insert default legend without lines
+%% \cvskilllegend*[1em]{}% adjust post spacing
+% \cvskilllegend*{Legend}%  Alternatively add a description string
+%% adjust the legend entries for other languages, here German
+% \cvskilllegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte\,/\,Spezialist]{Legende}
+
+%% Alternative legend style with the first three skill levels in one column
+%% Usage \cvskillplainlegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \setcvskilllegendcolumns[][0.6]%  works for classic, casual, banking
+% \setcvskilllegendcolumns[][0.55]%  works better for oldstyle and fancy
+% \cvskillplainlegend{}
+% \cvskillplainlegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte/Guru]{Legende}
+
+%% Add a head of the skill matrix table with descriptions.
+%% Usage \cvskillhead[<post_padding>][<Level>][<Skill>][<Years>][<Comment>]%
+\cvskillhead[-0.1em][Level][][][Comment]%   this inserts the standard legend in english and adjust padding
+%% Adjust head of the skill matrix for other languages
+% \cvskillhead[0.25em][Level][F\"ahigkeit][Jahre][Bemerkung]
+
+%% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}% 
+%% Example usages:
+\cvskillentry*{Languages:}{4}{English}{}{Used every day for work, social, and hobbies}
+% \cvskillentry{}{5}{French}{}{Native}
+\cvskillentry*{Programming:}{4}{C\texttt{++}}{}{Dev backend, performances optim. }
+\cvskillentry{}{3}{Python, GoLang, Bash}{}{Tools, dispatching framework with gRPC-go}
+\cvskillentry{}{2}{Sql, Couchbase, MongoDB}{}{Data management and migration}
+\cvskillentry*{Cloud:}{3}{Openshift, Helm, Kube, Docker}{}{Software migration to gce/Azure}
+%\cvskillentry*{OS:}{4}{Linux, Windows}{}{Dev sur server linux et sur VScode}
+\cvskillentry*{Methods:}{4}{Scrum, Kanban, Safe, Jira}{}{Work with agile since 2015}
+% \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
+\vspace{2pt}
+\cvitem{Others skills:}{Kafka, Java, Javascript, Git, VScode, \LaTeX}
+% removed eclipse
+
+\section{Hobbies}
+\cvdoubleitem{\textbf{Games:}}{Board games, game of go, chess}{\textbf{Sports:}}{Hiking, Running, fitness}
+% \cvitem{Games}{Board games, game of go, chess}
+\cvdoubleitem{\textbf{Science:}}{Physics, mathematics, philosophy}{\textbf{Riddles:}}{logic, physics}
+% \cvitem{Others}{Hiking, riddles }
+
+\end{document}
+
