@@ -56,7 +56,7 @@
 % \fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
 \email{louis.barjon@gmail.com}                  % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture_amadeus2}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Senior developer cloud \& C\texttt{++}}
+\quote{\Large Senior Engineer Cloud, DevOps \& C\texttt{++}}
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
 %\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
@@ -87,6 +87,10 @@
 %\showboxdepth=\maxdimen
 %\showboxbreadth=\maxdimen
 
+% https://observablehq.com/@prayerslayer/hex-to-latex-color-converter
+% \definecolor{carmine}{rgb}{0,0.7098,0.66667}
+% \colorlet{color1}{carmine}
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -111,11 +115,13 @@
 \renewcommand*{\listitemsymbol}{\labelfullbullet~}
 
 
-\cventry{2022 -  }{Java \& Cloud developer for Hospitality}{}{}{}{}
+\cventry{2022 -  }{Devops \& Cloud developer for Hospitality}{}{}{}{}
 % \cvline{}{description}
-\cvlistitem{Migrate 30 Java Spring BE for hotel distribution in Azure. Architecture: Kafka, Couchbase, Oracle}
+\cvlistitem{Migrate 30 Java Spring BE in Azure using Helm \& Openshift. Architecture: Kafka, Couchbase, Oracle}
 %\cvlistitem{Development in hotel distribution \& Azure migration. Java Spring Boot \& Camel, Kafka, Couchbase}
 \cvlistitem{Develop various python tools to help $\sim$100 Devs migrate their apps to the cloud}
+\cvlistitem{Coding guidelines improvements: code formatting, static code analysis, dependency checks, CI/CD }
+%\cvlistitem{Enforce \& multiply Unit tests by 2 in 6 months. Put in place SonarQube and monitor errors}
 
 % \renewcommand{\listitemsymbol}{}
 \cventry{2021 - 2022}{Golang middleware developer }{}{}{}{}
@@ -139,8 +145,10 @@
 % symbole environ $\sim$
 % \cvlistitem{Oscar Project: code optimization: number of instructions decreased by 5\% }
 % \cvlistitem{Unit test with Gmok/Gtest}
+\cvlistitem{Develop a python tool in order to tests iso-functional behavior between Cloud \& legacy}
 \cvlistitem{Algorithmic optimization for MCT (Minimum Connecting Time): CPU decreased by 75\%}
-\cvlistitem{Oracle Migration: smooth migration from Oracle 12 to 18 without outage }
+% \cvlistitem{Oracle Migration: smooth migration from Oracle 12 to 18 without outage }
+
 
 
 % \renewcommand{\listitemsymbol}{}
@@ -219,9 +227,9 @@
 % removed eclipse
 
 \section{Hobbies}
-\cvdoubleitem{\textbf{Games:}}{Board games, game of go, chess}{\textbf{Sports:}}{Hiking, Running, fitness}
+\cvdoubleitem{\textbf{Science:}}{Physics, mathematics, philosophy}{\textbf{Sports:}}{Hiking, Running, fitness}
 % \cvitem{Games}{Board games, game of go, chess}
-\cvdoubleitem{\textbf{Science:}}{Physics, mathematics, philosophy}{\textbf{Riddles:}}{logic, physics}
+\cvdoubleitem{\textbf{Games:}}{Chess, go, Rubik's Cube, Board games}{\textbf{Riddles:}}{logic, physics}
 % \cvitem{Others}{Hiking, riddles }
 
 \end{document}
