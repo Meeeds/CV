@@ -58,7 +58,7 @@
 % \fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
 \email{louis.barjon@gmail.com}                  % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture_amadeus2}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Senior developer cloud \& C\texttt{++}}
+\quote{\large \textsc{Senior Engineer Cloud, DevOps \& C\texttt{++}}}
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
 %\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
@@ -126,6 +126,7 @@
 \cventry{2021 - 2022}{Golang middleware developer }{}{}{}{}
 \cvlistitem{Design \& develop a generic tool to ease cloud migration of batches, used by $\sim$thousands Devs}
 \cvlistitem{Create a testing framework in bash in order to validate code changes}
+\cvlistitem{Simplify a complex architecture for better scalability and robustness, in particular by removing a single point of failure}
 
 %\renewcommand{\listitemsymbol}{$\circ$ }
 \renewcommand*{\listitemsymbol}{\labelfullbullet~}
@@ -136,6 +137,8 @@
 \cvlistitem{Code quality enforcement with SonarQube. PR perf checks \& improvement using callgrind
 %\inlinegraphics{sonar}
 }
+\cvlistitem{Advanced programming knowledge sharing sessions: Drive and present on a bi-weekly basis a complex technical subject to the department}
+
 \cventry{2016 - 2020}{C\texttt{++} \& Cloud developer for Shopping}{}{}{}{}
 \cvlistitem{Migrate Travel Solution product to the cloud (gce) using OpenShift \& Docker}
 \cvlistitem{ \SI{100}{\giga\byte} Data model migration from Oracle to Couchbase C\texttt{++} using key/value storage (json)}
@@ -166,13 +169,15 @@
 \cvlistitem{Run C\texttt{++} profiling using callgrind to decrease CPU by 10\% }
 %\cvlistitem{Algorithm to detect 3D models collisions. Achieve 100\% UT code coverage, CPU decreased by 10\% }
 
+\pagebreak
+\vspace*{10mm}
+
 \section{Education}
 \cventry{2010}{Master in Computer Science, Engineer}{}{}{}{}
 \cvlistitem{Ensimag school in Grenoble, Specialty: imaging and virtual reality}
 \cvlistitem{ Develop an \textcolor{cyan}{\href{http://www-evasion.imag.fr/Enseignement/cours/2009/ProjetImage/}{algorithm from a research paper}} to generate textures from a small image sample}
 
-\pagebreak
-\vspace*{10mm}
+
 
 \section{Skills}
 %% \cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
@@ -222,11 +227,13 @@
 %% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}% 
 %% Example usages:
 \cvskillentry*{Languages:}{4}{English}{}{Used every day for work, social, and hobbies}
-% \cvskillentry{}{5}{French}{}{Native}
-\cvskillentry*{Programming:}{4}{C\texttt{++}}{}{Dev backend, performances optim. }
-\cvskillentry{}{3}{Python, GoLang, Bash}{}{Tools, dispatching framework with gRPC-go}
+\cvskillentry{}{5}{French}{}{Native}
+\cvskillentry*{Programming:}{5}{C\texttt{++}}{}{Dev backend, performances optimization}
+\cvskillentry{Programming:}{5}{Python}{}{Dev backend, Tooling, Data science }
+\cvskillentry{}{3}{GoLang, Bash, Groovy}{}{Tools, scripting, CI/CD}
+%dispatching framework with gRPC-go
 \cvskillentry{}{2}{Sql, Couchbase, MongoDB}{}{Data management and migration}
-\cvskillentry*{Cloud:}{3}{Openshift, Helm, Kube, Docker}{}{Software migration to gce/Azure}
+\cvskillentry*{Cloud:}{4}{Openshift, Helm, Kube, Docker}{}{Software migration to gce/Azure}
 %\cvskillentry*{OS:}{4}{Linux, Windows}{}{Dev sur server linux et sur VScode}
 \cvskillentry*{Methods:}{4}{Scrum, Kanban, Safe, Jira}{}{Work with agile since 2015}
 % \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
